@@ -1,0 +1,33 @@
+@font-face {
+  font-family: "share Tech Mono";
+  src: url("../../assets/fonts/ShareTechMono-Regular.ttf");
+}
+
+button {
+  height: 65px;
+  width: 80px;
+  background: #4d4d4d;
+  color: #fff;
+  // outline: 1px solid black;
+  border: none;
+  font-family: "Share Tech Mono", monospace;
+  font-size: 20px;
+  cursor: default;
+
+  &:hover {
+    border: 1px solid #fff;
+    cursor: pointer;
+  }
+}
+
+.primary {
+  background: rgb(0, 68, 102);
+}
+
+.operation {
+  background: rgb(102, 102, 102);
+}
+
+.danger {
+  background: rgb(172, 57, 57);
+}

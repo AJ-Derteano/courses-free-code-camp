@@ -1,0 +1,155 @@
+.div__preview {
+  width: 70%;
+  max-width: 800px;
+  min-height: 200px;
+  margin-top: 2rem;
+}
+
+.preview__header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 5px;
+  font-size: 1.2rem;
+  background-color: #898888;
+  color: #d6d5d5;
+}
+
+.preview {
+  width: 100%;
+  min-height: 500px;
+  padding: 0.5vw;
+  background-color: #e0e0e0;
+  box-shadow: 28px 26px 16px -3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  overflow-wrap: break-word;
+}
+
+.div__preview.maximized {
+  position: absolute;
+  top: 0.5rem;
+}
+
+.preview h1 {
+  border-bottom: 2px solid #898888;
+  display: block;
+  font-size: 2em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+.preview h2 {
+  border-bottom: 1px solid #898888;
+  display: block;
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+.preview h3 {
+  display: block;
+  font-size: 1.17em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+.preview p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.preview code {
+  background-color: #d6d5d5;
+  color: #000;
+  padding: 5px;
+  line-height: 1.2rem;
+}
+
+.preview blockquote {
+  border-left: 3px solid #224b4b;
+  color: #224b4b;
+  padding-left: 5px;
+  margin-left: 25px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: block;
+  overflow: auto;
+}
+
+.preview pre code {
+  width: 100%;
+  display: inline-block;
+  background-color: #d6d5d5;
+  color: #000;
+  padding: 0.25vw 0.5vw;
+}
+
+table {
+  display: table;
+  border-collapse: collapse;
+  border-collapse: separate;
+  box-sizing: border-box;
+  text-indent: initial;
+  border-spacing: 2px;
+}
+
+table,
+th,
+td {
+  border: 1px solid #3d3c3c;
+}
+
+th,
+td {
+  padding: 5px;
+}
+
+.preview ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+.preview ol {
+  display: block;
+  list-style-type: decimal;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+.preview p img {
+  max-width: 90%;
+  display: block;
+  margin: 2rem auto;
+}
+
+@media screen and (max-width: 650px) {
+  .div__preview {
+    width: 90vw;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .div__preview {
+    width: 85vw;
+  }
+}

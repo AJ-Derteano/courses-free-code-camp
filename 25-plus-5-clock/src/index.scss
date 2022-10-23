@@ -1,0 +1,25 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100wh;
+  height: 100vh;
+  max-height: 100vh;
+
+  background-color: #1a1a1a;
+  color: #e6e6e6;
+  // background-color: #cccccc;
+  // color: #1a1a1a;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  color: #e6e6e6;
+  font-style: none;
+}

@@ -1,0 +1,43 @@
+.div__editor {
+  width: 50%;
+  max-width: 600px;
+  height: auto;
+}
+/* Color generator https://maketintsandshades.com/#989797 */
+.editor__header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 5px;
+  font-size: 1.2rem;
+  background-color: #898888;
+  color: #d6d5d5;
+}
+
+.editor {
+  width: 100%;
+  min-height: 200px;
+  resize: vertical;
+  outline: none;
+  border: none;
+  padding: 0.25vw;
+  font-size: 0.875rem;
+  margin-bottom: 0;
+  background-color: #e0e0e0;
+  box-shadow: 28px 26px 16px -3px rgba(0, 0, 0, 0.1);
+}
+
+.editor:focus {
+  outline: none;
+}
+
+.editor.maximized {
+  min-height: 85vh;
+}
+
+@media screen and (max-width: 850px) {
+  .div__editor {
+    width: 80%;
+    max-width: 550px;
+  }
+}

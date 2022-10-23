@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "digital 7";
+  src: url("../../assets/fonts/digital-7.regular.ttf");
+}
+
+.containerDisplay {
+  background-color: #000;
+  padding: 6px 5px;
+  font-family: "digital 7", sans-serif;
+  font-weight: 500;
+  max-width: calc(80px * 4 + 4px);
+
+  .formulaScreen {
+    min-height: 20px;
+    font-size: 20px;
+    color: orange;
+    text-align: right;
+    line-height: 20px;
+    word-wrap: break-word;
+  }
+
+  .displayScreen {
+    min-height: 35px;
+    font-size: 29px;
+    line-height: 35px;
+    color: #fff;
+    text-align: right;
+  }
+}

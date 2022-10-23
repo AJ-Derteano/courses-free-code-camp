@@ -1,0 +1,40 @@
+.setTime {
+  width: 320px;
+  max-width: 100%;
+
+  padding: 15px 10px;
+
+  font-size: 1.8rem;
+
+  button {
+    border: none;
+    outline: none;
+    padding: 5px;
+    margin: 0px 5px;
+    height: 2.5rem;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    background-color: transparent;
+    border-radius: 50%;
+    color: #e6e6e6;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .btnArrowDown {
+    transform: rotate(-180deg);
+  }
+  p {
+    text-align: center;
+  }
+
+  .counterTime {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.8rem;
+  }
+}
