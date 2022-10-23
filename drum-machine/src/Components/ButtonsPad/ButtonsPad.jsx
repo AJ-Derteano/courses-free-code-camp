@@ -1,43 +1,40 @@
-import { useEffect, useState } from "react";
-import ButtonPad from "../ButtonPad/ButtonPad";
+import Button from "../Button/Button";
 import { bankOne, bankTwo } from "./Bank";
-import { NumPadStyle } from "./NumPad.style";
+import { ButtonsPadStyle } from "./ButtonsPadStyle";
 
-export const NumPad = (props) => {
+export const ButtonsPad = (props) => {
   const { volumen, power, bankMusic, setTouchPad } = props;
-  const [btnPadActive, setBtnPadActive] = useState(false);
 
-  const handleKeyPress = (e) => {
-    const key = e.key.toUpperCase();
-    playSound(key, e.keyCode);
+  const handleKeyPress = (evt) => {
+    const key = evt.key.toUpperCase();
+    playSound(key);
   };
 
   window.onkeydown = handleKeyPress;
 
-  const playSound = (keyTrigger: string, keyCode: string, id: string) => {
-    const btnPad = document.getElementById(keyCode);
-    if (btnPad) {
-      btnPad.focus();
-      setTimeout(() => btnPad.blur(), 100);
-    }
+  const playSound = (keyTrigger) => {
+    const audio = document.getElementById(keyTrigger);
+    const button = audio.closest("button");
+
+    button.focus();
+
+    setTimeout(() => button.blur(), 100);
 
     if (!power) return;
 
-    const audio = document.getElementById(keyTrigger);
     if (audio) {
       audio.currentTime = 0;
       audio.volume = volumen / 100;
       audio.play();
-      console.log(id);
-      setTouchPad(id);
+      setTouchPad(button.id);
     }
   };
 
   return (
-    <NumPadStyle>
+    <ButtonsPadStyle>
       {!bankMusic
-        ? bankOne.map((bank: object) => (
-            <ButtonPad
+        ? bankOne.map((bank) => (
+            <Button
               key={bank.keyCode}
               keyCode={bank.keyCode}
               keyTrigger={bank.keyTrigger}
@@ -47,8 +44,8 @@ export const NumPad = (props) => {
               power={power}
             />
           ))
-        : bankTwo.map((bank: object) => (
-            <ButtonPad
+        : bankTwo.map((bank) => (
+            <Button
               key={bank.keyCode}
               keyCode={bank.keyCode}
               keyTrigger={bank.keyTrigger}
@@ -58,6 +55,6 @@ export const NumPad = (props) => {
               power={power}
             />
           ))}
-    </NumPadStyle>
+    </ButtonsPadStyle>
   );
 };

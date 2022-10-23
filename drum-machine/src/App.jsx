@@ -1,10 +1,10 @@
 import "./App.css";
-import NumPadMusic from "./Components/NumPadMusic/NumPadMusic";
+import DrumPad from "./Components/DrumPad/DrumPad";
 
 function App() {
   return (
     <div className="App">
-      <NumPadMusic />
+      <DrumPad />
     </div>
   );
 }

@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-const padWidth: string = "80px;";
-const padHeight: string = "80px;";
+const padWidth = "80px;";
+const padHeight = "80px;";
 
-export const DrumPad = styled.button`
+export const Button = styled.button`
   height: ${padHeight};
   width: ${padWidth};
 
@@ -20,8 +20,13 @@ export const DrumPad = styled.button`
   border-radius: 5px;
   box-shadow: 8px 8px 2px -3px rgba(0, 0, 0, 0.1);
 
+  border:none;
+  outline:none;
+
   :hover {
     cursor: pointer;
+    border:none;
+    outline:none;
     // box-shadow: 10px 10px 2px -3px rgba(0, 0, 0, 0.2);
   }
 

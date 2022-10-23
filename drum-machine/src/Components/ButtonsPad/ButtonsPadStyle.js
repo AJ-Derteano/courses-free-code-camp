@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const NumPadStyle = styled.section`
+export const ButtonsPadStyle = styled.section`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 5px;

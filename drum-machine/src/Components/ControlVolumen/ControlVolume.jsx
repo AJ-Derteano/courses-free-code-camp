@@ -1,15 +1,17 @@
 import { useState } from "react";
-import { ContainerVolumen, Input } from "./VolumenControl.style";
+import { ContainerVolumen, Input } from "./ControlVolumeStyle";
 
-export const VolumenControl = (props) => {
+export const ControlVolume = (props) => {
+
   const { setDisplay, setVolumen } = props;
+
   const [volRange, setVolRange] = useState("50% 100%");
 
-  const handleVolumenRange = (e: Object): void => {
-    const { target } = e;
-    const min: number = target.min;
-    const max: number = target.max;
-    const val: number = target.value;
+  const handleVolumenRange = (evt) => {
+    const { target } = evt;
+    const min = target.min;
+    const max = target.max;
+    const val = target.value;
     setVolumen(val);
     setDisplay(`Volumen ${val}`);
     setVolRange(`${((val - min) * 100) / (max - min)}% 100%`);
@@ -25,7 +27,7 @@ export const VolumenControl = (props) => {
         min="0"
         max="100"
         volumen={volRange}
-        onChange={(e) => handleVolumenRange(e)}
+        onChange={(evt) => handleVolumenRange(evt)}
       />
     </ContainerVolumen>
   );

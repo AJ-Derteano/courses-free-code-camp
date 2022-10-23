@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import { NumPad } from "../NumPad/NumPad";
-import { SwitchControl } from "../Switch/Switch";
-import { VolumenControl } from "../VolumenControl/VolumenControl";
-import { NumPadMusicStyle } from "./NumPadMusic.style";
+import { ButtonsPad } from "../ButtonsPad/ButtonsPad";
+import { ControlSwitch } from "../ControlSwitch/ControlSwitch";
+import { ControlVolume } from "../ControlVolumen/ControlVolume";
+import { DrumPadStyle } from "./DrumPadStyle";
 
-const title: object = {
+const title = {
   width: "150px",
   height: "3rem",
   lineHeight: "3rem",
@@ -15,12 +15,13 @@ const title: object = {
   borderRadius: "10px",
 };
 
-const NumPadMusic = () => {
+const DrumPad = () => {
+
   const [volumen, setVolumen] = useState(50);
   const [display, setDisplay] = useState("");
   const [bankMusic, setBankMusic] = useState();
   const [touchPad, setTouchPad] = useState("");
-  const [power, setPower] = useState();
+  const [power, setPower] = useState(true);
 
   useEffect(() => {
     setDisplay(!power ? "OFF" : "");
@@ -35,24 +36,24 @@ const NumPadMusic = () => {
   }, [touchPad]);
 
   return (
-    <NumPadMusicStyle id="drum-machine">
+    <DrumPadStyle id="drum-machine">
       <p>Drum Pad</p>
-      <NumPad
+      <ButtonsPad
         volumen={volumen}
         power={power}
         bankMusic={bankMusic}
         setTouchPad={setTouchPad}
       />
       <div>
-        <SwitchControl title="Power" functionSwitch={setPower} />
+        <ControlSwitch title="Power" functionSwitch={setPower} />
         <p id="display" style={title}>
           {display}
         </p>
-        <VolumenControl setDisplay={setDisplay} setVolumen={setVolumen} />
-        <SwitchControl title="Bank" functionSwitch={setBankMusic} />
+        <ControlVolume setDisplay={setDisplay} setVolumen={setVolumen} />
+        <ControlSwitch title="Bank" functionSwitch={setBankMusic} />
       </div>
-    </NumPadMusicStyle>
+    </DrumPadStyle>
   );
 };
 
-export default NumPadMusic;
+export default DrumPad;

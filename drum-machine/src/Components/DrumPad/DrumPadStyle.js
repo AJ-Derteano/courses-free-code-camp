@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const NumPadMusicStyle = styled.div`
+export const DrumPadStyle = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;

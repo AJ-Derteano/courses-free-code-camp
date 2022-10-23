@@ -1,16 +1,11 @@
 import { useEffect, useState } from "react";
-import { ContainerSwitch, Switch } from "./Switch.style";
+import { ContainerSwitch, Switch } from "./ControlSwitchStyle";
 
-type SwitchControlProps = {
-  title: string;
-  functionSwitch: Function;
-};
+export const ControlSwitch = (props) => {
+  const { title, functionSwitch } = props;
 
-export const SwitchControl = ({
-  title,
-  functionSwitch,
-}: SwitchControlProps) => {
   const [switchActive, setSwitchActive] = useState(false);
+
   useEffect(() => {
     functionSwitch(switchActive);
   }, [switchActive]);
